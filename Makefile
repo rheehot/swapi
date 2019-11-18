@@ -1,6 +1,6 @@
 
 install:
-	pip install -r requirements.txt
+	LIBMEMCACHED=/usr/local/Cellar/libmemcached/1.0.18_2 pip install -r requirements.txt
 
 build:
 	python manage.py migrate
