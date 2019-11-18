@@ -38,6 +38,7 @@ class PeopleSerializer(serializers.HyperlinkedModelSerializer):
             "created",
             "edited",
             "url",
+            "id",
         )
 
 
@@ -59,7 +60,8 @@ class PlanetSerializer(serializers.HyperlinkedModelSerializer):
             "films",
             "created",
             "edited",
-            "url"
+            "url",
+            "id"
         )
 
 
@@ -81,7 +83,8 @@ class FilmSerializer(serializers.HyperlinkedModelSerializer):
             "species",
             "created",
             "edited",
-            "url"
+            "url",
+            "id"
         )
 
 
@@ -109,7 +112,8 @@ class SpeciesSerializer(serializers.HyperlinkedModelSerializer):
             "films",
             "created",
             "edited",
-            "url"
+            "url",
+            "id"
         )
 
 
@@ -139,7 +143,8 @@ class VehicleSerializer(serializers.HyperlinkedModelSerializer):
             "films",
             "created",
             "edited",
-            "url"
+            "url",
+            "id"
         )
 
 
@@ -171,6 +176,7 @@ class StarshipSerializer(serializers.HyperlinkedModelSerializer):
             "films",
             "created",
             "edited",
-            "url"
+            "url",
+            "id"
         )
 
