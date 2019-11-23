@@ -21,7 +21,7 @@ from .serializers import (
 )
 
 
-class PeopleViewSet(viewsets.ReadOnlyModelViewSet):
+class PeopleViewSet(viewsets.ModelViewSet):
 
     queryset = People.objects.all()
     serializer_class = PeopleSerializer
@@ -33,8 +33,17 @@ class PeopleViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         return super(PeopleViewSet, self).list(request, *args, **kwargs)
 
+    def create(self, request, *args, **kwargs):
+        return super(PeopleViewSet, self).create(request, *args, **kwargs)
 
-class PlanetViewSet(viewsets.ReadOnlyModelViewSet):
+    def update(self, request, *args, **kwargs):
+        return super(PeopleViewSet, self).update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        return super(PeopleViewSet, self).destroy(request, *args, **kwargs)
+
+
+class PlanetViewSet(viewsets.ModelViewSet):
 
     queryset = Planet.objects.all()
     serializer_class = PlanetSerializer
@@ -46,8 +55,17 @@ class PlanetViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         return super(PlanetViewSet, self).list(request, *args, **kwargs)
 
+    def create(self, request, *args, **kwargs):
+        return super(PlanetViewSet, self).create(request, *args, **kwargs)
 
-class FilmViewSet(viewsets.ReadOnlyModelViewSet):
+    def update(self, request, *args, **kwargs):
+        return super(PlanetViewSet, self).update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        return super(PlanetViewSet, self).destroy(request, *args, **kwargs)
+
+
+class FilmViewSet(viewsets.ModelViewSet):
 
     queryset = Film.objects.all()
     serializer_class = FilmSerializer
@@ -59,8 +77,17 @@ class FilmViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         return super(FilmViewSet, self).list(request, *args, **kwargs)
 
+    def create(self, request, *args, **kwargs):
+        return super(FilmViewSet, self).create(request, *args, **kwargs)
 
-class SpeciesViewSet(viewsets.ReadOnlyModelViewSet):
+    def update(self, request, *args, **kwargs):
+        return super(FilmViewSet, self).update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        return super(FilmViewSet, self).destroy(request, *args, **kwargs)
+
+
+class SpeciesViewSet(viewsets.ModelViewSet):
 
     queryset = Species.objects.all()
     serializer_class = SpeciesSerializer
@@ -72,8 +99,17 @@ class SpeciesViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         return super(SpeciesViewSet, self).list(request, *args, **kwargs)
 
+    def create(self, request, *args, **kwargs):
+        return super(SpeciesViewSet, self).create(request, *args, **kwargs)
 
-class VehicleViewSet(viewsets.ReadOnlyModelViewSet):
+    def update(self, request, *args, **kwargs):
+        return super(SpeciesViewSet, self).update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        return super(SpeciesViewSet, self).destroy(request, *args, **kwargs)
+
+
+class VehicleViewSet(viewsets.ModelViewSet):
 
     queryset = Vehicle.objects.all()
     serializer_class = VehicleSerializer
@@ -85,8 +121,17 @@ class VehicleViewSet(viewsets.ReadOnlyModelViewSet):
     def list(self, request, *args, **kwargs):
         return super(VehicleViewSet, self).list(request, *args, **kwargs)
 
+    def create(self, request, *args, **kwargs):
+        return super(VehicleViewSet, self).create(request, *args, **kwargs)
 
-class StarshipViewSet(viewsets.ReadOnlyModelViewSet):
+    def update(self, request, *args, **kwargs):
+        return super(VehicleViewSet, self).update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        return super(VehicleViewSet, self).destroy(request, *args, **kwargs)
+
+
+class StarshipViewSet(viewsets.ModelViewSet):
 
     queryset = Starship.objects.all()
     serializer_class = StarshipSerializer
@@ -97,3 +142,12 @@ class StarshipViewSet(viewsets.ReadOnlyModelViewSet):
 
     def list(self, request, *args, **kwargs):
         return super(StarshipViewSet, self).list(request, *args, **kwargs)
+
+    def create(self, request, *args, **kwargs):
+        return super(StarshipViewSet, self).create(request, *args, **kwargs)
+
+    def update(self, request, *args, **kwargs):
+        return super(StarshipViewSet, self).update(request, *args, **kwargs)
+
+    def destroy(self, request, *args, **kwargs):
+        return super(StarshipViewSet, self).destroy(request, *args, **kwargs)

@@ -14,16 +14,17 @@ from .models import (
 
 class PeopleSerializer(serializers.HyperlinkedModelSerializer):
 
-    homeworld = serializers.HyperlinkedRelatedField(
-        read_only=True,
-        view_name="planet-detail"
-    )
+    # homeworld = serializers.HyperlinkedRelatedField(
+    #     read_only=True,
+    #     view_name="planet-detail"
+    # )
 
     class Meta:
         model = People
         fields = (
             "name",
             "height",
+            "id",
             "mass",
             "hair_color",
             "skin_color",
@@ -38,7 +39,6 @@ class PeopleSerializer(serializers.HyperlinkedModelSerializer):
             "created",
             "edited",
             "url",
-            "id",
         )
 
 
@@ -47,6 +47,7 @@ class PlanetSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Planet
         fields = (
+            "id",
             "name",
             "rotation_period",
             "orbital_period",
@@ -61,7 +62,6 @@ class PlanetSerializer(serializers.HyperlinkedModelSerializer):
             "created",
             "edited",
             "url",
-            "id"
         )
 
 
@@ -70,6 +70,7 @@ class FilmSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Film
         fields = (
+            "id",
             "title",
             "episode_id",
             "opening_crawl",
@@ -84,7 +85,6 @@ class FilmSerializer(serializers.HyperlinkedModelSerializer):
             "created",
             "edited",
             "url",
-            "id"
         )
 
 
@@ -98,6 +98,7 @@ class SpeciesSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Species
         fields = (
+            "id",
             "name",
             "classification",
             "designation",
@@ -113,7 +114,6 @@ class SpeciesSerializer(serializers.HyperlinkedModelSerializer):
             "created",
             "edited",
             "url",
-            "id"
         )
 
 
@@ -128,6 +128,7 @@ class VehicleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Vehicle
         fields = (
+            "id",
             "name",
             "model",
             "manufacturer",
@@ -144,7 +145,6 @@ class VehicleSerializer(serializers.HyperlinkedModelSerializer):
             "created",
             "edited",
             "url",
-            "id"
         )
 
 
@@ -159,6 +159,7 @@ class StarshipSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Starship
         fields = (
+            "id",
             "name",
             "model",
             "manufacturer",
@@ -177,6 +178,5 @@ class StarshipSerializer(serializers.HyperlinkedModelSerializer):
             "created",
             "edited",
             "url",
-            "id"
         )
 
