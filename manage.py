@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/app/.heroku/python/bin/python python
 import os
 import sys
 
