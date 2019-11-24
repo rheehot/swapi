@@ -1,7 +1,12 @@
 import os
 import dj_database_url
+import dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
 
 SECRET_KEY = os.environ.get(
     'SECRET_KEY',
@@ -48,12 +53,8 @@ ROOT_URLCONF = 'swapi.urls'
 
 WSGI_APPLICATION = 'swapi.wsgi.application'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config()
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'

@@ -21,8 +21,10 @@ markdown2==2.3.0
 psycopg2==2.7.1
 pycrypto==2.6.1
 pylibmc==1.4.1
+python-dotenv==0.10.3
 requests==2.5.1
 six==1.8.0
 stripe==1.19.1
+typing==3.7.4.1
 whitenoise==1.0.3
 # wsgiref==0.1.2
